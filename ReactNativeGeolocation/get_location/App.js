@@ -117,6 +117,9 @@ export default function App() {
 
   return (
     <View style={styles.container}>
+      <View>
+        <Text> Physical Location Tracker</Text>
+      </View>
       <Text>Longitude: {position?.longitude}</Text>
       <Text>Latitude: {position?.latitude}</Text>
       <View style={styles.separator} />
