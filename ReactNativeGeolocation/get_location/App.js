@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {StyleSheet, Text, View, Button} from 'react-native';
+import {StyleSheet, Text, View, Button, TouchableOpacity} from 'react-native';
 import * as TaskManager from 'expo-task-manager';
 import * as Location from 'expo-location';
 
@@ -120,21 +120,16 @@ export default function App() {
       <Text>Longitude: {position?.longitude}</Text>
       <Text>Latitude: {position?.latitude}</Text>
       <View style={styles.separator} />
-      <View
-        style={{marginTop: 10, padding: 10, borderRadius: 10, width: '40%'}}>
-        <Button
-          onPress={startForegroundUpdate}
-          title="Start in foreground"
-          color="green"
-        />
-      </View>
 
-      <View style={styles.separator} />
       <Button
-        onPress={stopForegroundUpdate}
-        title="Stop in foreground"
-        color="red"
+        onPress={startForegroundUpdate}
+        title="Submit you Location"
+        color="green"
       />
+
+      <TouchableOpacity onPress={stopForegroundUpdate} style={styles.button}>
+        <Text style={styles.buttonText}>Stop Location Sharing</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -151,7 +146,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   button: {
-    marginTop: 15,
+    backgroundColor: 'red',
+    padding: 20,
+    borderRadius: 5,
   },
   separator: {
     marginVertical: 8,
