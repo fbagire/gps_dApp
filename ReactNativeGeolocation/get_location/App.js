@@ -8,11 +8,11 @@ import {
   Button,
 } from 'react-native';
 
-// import RNLocation from "react-native-location";
+import RNLocation from 'react-native-location';
 
-// RNLocation.configure({
-//   distanceFilter: null,
-// });
+RNLocation.configure({
+  distanceFilter: 5.0,
+});
 
 const App = () => {
   return (
