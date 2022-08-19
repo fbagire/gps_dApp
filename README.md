@@ -6,8 +6,8 @@ i.e., one party get rewarded for being in certain area based on the agreement ab
 
 App requesting sharing location permission:
 
-![](screenshots/lo1.jpeg)
+![](screenshots/Io1.jpg)
 
 When Agreed, and you submit your location:
 
-![](screenshots/lo2.jpeg)
+![](screenshots/Io2.jpg)
